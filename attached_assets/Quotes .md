@@ -1,0 +1,225 @@
+
+
+* *Hard times create strong men, strong men create good times, good times create weak men, and weak men create hard times*  
+* What I know is limited, and what I don’t know is unlimited \~ Tom Brady  
+* Whatever anybody says or does, assume positive intent \~ Indra Nooyi  
+* We judge others by their actions, and ourselves by our intentions  
+* Hope for the best and be prepared for the worst \~ Maya Angelou  
+* What sets you apart: **Taking risks, high performance, and building relationships**  
+* Grit, a bias for action, narration/storyteller \~ David Friedberg  
+* Simply put, **trust comes from saying what you will do and then following through and doing it.** Then, you must do this enough times for leaders to know they can rely on you.  
+* Think like a rich man, work like a poor man  
+* **Choose your suffering before suffering chooses you\! \~Monideep**  
+* To win in life: (1) rich person mindset, (2) discipline  
+* Discipline gives you choices in life  
+* **Every NO gets you closer to a YES**  
+* **Everyone wants to feel (1) safe and secure and (2) in control**  
+* Negotiation… is nothing more than communication with results. \~ Chriss Voss  
+* Use What and How, not Why, while negotiating or discussing a topic  
+* **How to make a decision:**  
+  * Choose  
+    * If it works out: Great  
+    * Else: adjust  
+* **Winners for the next decade:**  
+  * Step 1:People who can focus  
+  * Step 2:People who can focus on the right things  
+  * Example: ask ChatGPT something, verify yourself  
+  * Understand the concept and know what needs to be applied  
+* Be stubborn on vision, but flexible on details \~ Jeff Bezos  
+* **You will win if you do not quit**  
+* **Greatness is born out of consistency over time**.   
+  * It's nurtured through relentless practice, the willingness to evolve, the sacrifices made along the way, and an unending commitment to ***growth and learning***  
+* **Expectations** are disappointments waiting to happen \~Susan David  
+* POWER → the level of influence one has on their lives  
+* **Impatience with actions and patience with results**  
+* Single-minded focus to become the best (e.g, product management), avoid all distractions at any cost (news, drama)  
+* Do not be afraid to fail, it’s part of learning how to fly, be fearful of not growing  
+* ***Win by becoming too good to be ignored***  
+* Focus on action, not outcome  
+* **Your hardest times often lead to the greatest moments of your life**  
+* Keep going \-\> Tough situations build strong people in the end  
+*  Blasting through procrastination:  
+  * Take small steps \-\> Create a small step action plan  
+  * Ask for help and take small steps  
+* **Focus more on the process and less on the results \~ MS Dhoni**
+
+* History will always belong to the victor  
+* Concentrate on a single goal and beat it into submission  
+* Panditji is the epitome of discipline  
+* **NOW vs MOST**  
+* Being weird is better than being normal  
+* FINANCIAL FREEDOM  
+* **I am my parents’ biggest asset**
+
+* Surround yourself with smart people
+
+* **LUCK: Preparation, waiting for an opportunity**  
+* Emotion vs logic  
+* Passion: Creative, control, and impact  
+* Pattern recognition  
+* Cone of learning  
+* **Smile and eye contact**  
+* Knowledge is power  
+* Lateral thinking  
+* **When you fear it \= do it**
+
+* **Happiness is in the process**  
+* Frontal Lobe vs Amygdala  
+* Every day is a new challenge, gratitude, independence, and interest  
+* Small steps every day  
+* **Pain \+ reflection is progress**  
+* Curiosity  
+* Persistence  
+* Life is like a puzzle
+
+* Student for life and data  
+* Collaboration is key to success  
+* **Opinions vs Facts**  
+* The truth is more important than being right  
+* Dreams \+ Reality \+ Determination \= Success  
+* Live in the moment
+
+* Happiness is and will always be a choice  
+* Build relationships  
+* Be practical  
+* **Learning to invest \= Making money work for you**  
+* Education is the most powerful tool  
+* Assumptions exist where data does not exist  
+* Daily consistent actions lead to success \= HUSTLE
+
+* How do you become special? Become capable  
+* Hunger (capable) \> emotion (feel)  
+* Reality \< Right Now \< Aspiration   
+* If you want anything in life, you must be intentional  
+* Great results are due to great habits  
+* Less is more
+
+* Concentrate on a few projects \= Make it high-quality  
+* **Stop managing time and start managing focus**  
+* The temptation to quit \= is greatest when about to succeed  
+* **Mental, Emotional, Physical, and Spiritual**  
+* The secret of success lies in the fact that winners form the habit of doing things that failures do not like to do  
+* **All change is hard at first, messy in the middle, and gorgeous in the end**
+
+* Own your mornings, elevate your life  
+* Voluntary discomfort, 1 act every day  
+* Good rest and recovery are the keys to success  
+* Rise first and die last  
+* Be yourself, everything else is taken
+
+* Legendary Equation: \[Pressure X Refueling \= Growth \+ Endurance\]  
+* **The time you least feel like doing something is the best time to do it**  
+* Tomorrow is a bonus, not a right  
+* Only people in pain do painful things to other people  
+* Never focus your thinking on lack, always on plenty  
+* **Victims love entertainment, victors love education**
+
+* **The grade of work you offer to the world reflects the strength of respect you have for yourself**  
+* It is only when we improve that our lives improve   
+* Delayed gratification: NOW vs MOST  
+* Nerves: feeling the energy of people in the room, who want you to succeed  
+* **Every addiction to a distraction leads to a dip in creative thinking**   
+* Opportunity comes, but it does not come often, so seize it when it does come
+
+* Living in the past steals so much energy from most people  
+* **If you will live like no one else, later you can live like no one else**  
+* Stepping into magic has a lot to do with saying goodbye to your past, embracing the present, and making a return to the imaginativeness, innocence, exuberance, and lovingness you were intimate with when you were a child
+
+* An increase in knowledge leads to a rise in time \~Mom  
+* Life is all about progress and not perfection  
+* **True winners are relentless. They improve every day**  
+* If size were everything that mattered, the elephant or giraffe would be the king of the jungle, not the lion  
+* Discipline is worth it  
+* Any mental work cannot have a time limit \~Dad
+
+* Imagine caring for yourself as caring for someone else  
+* **Always be grateful for what you have**  
+* **When things are hard, you go hard. When things are okay, you go harder**  
+* **The fool is the precursor to the master**  
+* It is worth doing things badly rather than not doing them at all  
+* To think and have an opinion, one has to risk being offensive  
+* Too much agreeableness does not lead anywhere
+
+* When you have an opportunity, you are a fool to take it for granted   
+* Success: Hyper competence and genuine desire for reciprocity (helping others grow)  
+* DIGITAL DETOX: DOPAMINE dopamine dopamine  
+* All champions are relentless and keep improving every season  
+* **Intelligence is the ability to learn and transform**  
+* **Before you help someone, you should find out why they are in trouble**
+
+* When things get tough, you push forward \~Robert Kiyosaki  
+* **The right decision is always harder in the short term but better in the long term \~ Dave Ramsey**  
+* Two most important things: Truth and responsibility  
+* **When someone does something you want them to do, reward them**  
+* There exist no shortcuts in life \~Sebastian Vettel  
+* You are extraordinary until you choose to be ordinary  
+* The future is a judgmental father
+
+* **Take responsibility, take ownership, take action**  
+* Someone new in the neighborhood, asking for a small favor, allows them to show kindness, and debt is incurred. It is a good way to develop trust and not be a stranger anymore  
+* Work is doing it, discipline is doing it every day, diligence is doing it well every day  
+* The process is more important than the result  
+* Discipline takes you places where motivation cannot 
+
+* **Plan A is to do something, and Plan B is to make Plan A work**  
+* We have two lives, and the second begins when we realize we only have one” – Confucius  
+* **Amor Fati: love and embrace whatever the outcome: LOVE OF FATE**   
+* Whatever you see is not the reality, and whatever is the reality, you don't see  
+* When work gives you panic, start early \~ Katie  
+* **You suffer more in imagination than reality \~ Seneca**  
+* Winners need discipline not motivation
+
+* What stands in the way becomes the way \~ Marcus Aurelius  
+* Mindset and attitude are everything in life   
+* Success in life is a matter not so much of talent as of concentration and perseverance  
+* Instead of I have to do this…, try I get to do this…  
+* Change occurs constantly, suffering from it is optional, everything depends on how we perceive it  
+* Pick your damn sacrifice  
+* **Problems will always be there, focus on the solutions: Survival of the fittest**  
+* **If you BAP, no one will BLOW**  
+* 3 constant things in life: birth, death, and taxes/change  
+* Competence is everything in life  
+* **You are a Product: design how to make yourself successful**  
+* **The internal process is Project Management**  
+* Fear and laziness will kill you  
+* Storytelling is a skill to learn  
+* 3 most important things in life: career, relationships, and health  
+* Golf: knees bend, cross grip, and move the body back for the swing  
+* It's good to have an opinion, focus on controlling emotions  
+* You become what you pay attention to \~ Marcus Aurelius  
+* Do what serves you   
+    
+* Dreams vs Goals: the difference is specificity   
+* If you want to convince someone about something, don’t focus on advantages (gain), instead, how it helps avoid the disadvantages (loss)  
+* **The fear of losing something motivates people more than the prospect of gaining something of equal value**  
+* If you want to achieve something, you need to be committed – you need to be disciplined \~ Seb Vettel  
+* Sweat more in practice, bleed less in war  
+* Make the sacrifices count\!  
+* You need to make time\!  
+* Impatience with action and patience with results  
+* What is the value of your time? $5000  
+* **Be a perpetual learning machine**  
+* To win big, one needs to suffer daily
+
+* The essence of life:   
+  * To win must be supremely patient and farsighted  
+  * The game is built on patterns: moves will be repeated with slight alterations  
+* **Imagine how big you would dream if you knew you could not fail**  
+* **Plan A is to do something fun for you, and Plan B is to make Plan A work**  
+* Depth is my greatest strength  
+* Be kind when life does not make any sense  
+* If you need more clarification on a course of action, do not attempt it. Your doubts and hesitations will infect your execution. Enter action with boldness  
+* We are all the same at the macro level but different at the micro level   
+* Don’t fight the forces, use them \~ Buckminster Fuller  
+* Career success:  
+  * Strategic planning  
+  * Proactive relationship-building  
+  * Continuous personal development  
+* **Quadrant:**  
+  	**Short-term: easy decisions, Long term: hard life**  
+  	**Short-term: hard decisions, Long-term: easy life**  
+* Mark Zuckerberg's 4 rules for life:  
+  * **Love Yourself:** Prioritize self-acceptance before helping others.  
+  * **Serve Others:** Once you value yourself, you can better support those around you.  
+  * **Focus on What You Can Control:** Direct your energy toward what you can influence.  
+  * **Never Give Up:** Stay resilient and committed to your goals.
