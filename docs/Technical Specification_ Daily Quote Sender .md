@@ -28,13 +28,13 @@ The Daily Quote Sender is a backend-driven, schedule-based tool that randomly se
 
   * Trigger daily via cron (Replit or Windsurf)
 
-**Frontend (Optional)**
+**Frontend**
 
-* Static UI (HTML or React) to show archive
+* Static UI (HTML or React) to show archive and allow subscriptions
 
 * Host on Netlify
 
-* Optional “Subscribe” input (only stores local email list)
+* “Subscribe” input (stores local email list)
 
 **Deployment Options**
 
@@ -42,7 +42,7 @@ The Daily Quote Sender is a backend-driven, schedule-based tool that randomly se
 
 * **Production:** Replit cron job or Windsurf task
 
-* **Optional UI Deployment:** Netlify (static page)
+* **UI Deployment:** Netlify (static page)
 
 ---
 
@@ -68,7 +68,16 @@ daily-quote/
 ├── scheduler.py (or cron.json)  
 ├── .env (API keys)  
 ├── requirements.txt / package.json  
-└── README.md
+├── README.md  
+├── backend/  
+│   ├── app.py  
+│   ├── requirements.txt  
+├── frontend/  
+│   ├── index.html  
+│   ├── styles.css  
+│   └── scripts.js  
+└── docs/  
+    └── Technical Specification_ Daily Quote Sender .md
 
 ---
 
@@ -79,6 +88,7 @@ daily-quote/
 | 1 | Send one daily quote via email using static quote list |
 | 2 | Add SMS option via Twilio |
 | 3 | Deploy static quote archive (Netlify) |
+| 4 | Implement frontend UI for displaying quotes and handling subscriptions |
 
 ---
 
@@ -102,6 +112,8 @@ daily-quote/
 
   * `schedule`, `random`, `dotenv`
 
+  * `Flask`, `Flask-Cors`
+
 * Node.js:
 
   * `@sendgrid/mail`, `cron`, `dotenv`
@@ -110,7 +122,7 @@ daily-quote/
 
   * Replit, Windsurf for scheduling
 
-  * Netlify for optional UI
+  * Netlify for UI
 
 ---
 
@@ -124,6 +136,8 @@ daily-quote/
 
 * Fallback test: if quote list is empty, send default fallback
 
+* Frontend test: confirm subscription form works and recent quotes are displayed
+
 ---
 
 ## **9\. 🧩 Extensions / Future Work**
@@ -135,4 +149,18 @@ daily-quote/
 * AI-based quote selection (mood-based)
 
 * UI to upload custom quote lists
+
+---
+
+## **10\. 🌐 Hosting Frontend on Netlify**
+
+1. Create a Netlify account if you don't have one.
+
+2. Connect your GitHub repository to Netlify.
+
+3. Deploy the `frontend` directory as a static site.
+
+4. Configure the build settings if necessary (e.g., build command, publish directory).
+
+5. After deployment, your frontend UI will be accessible via the Netlify URL provided.
 
