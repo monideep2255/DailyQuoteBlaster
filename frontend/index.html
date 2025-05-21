@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quote Blaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Daily Quote Blaster</h1>
+    </header>
+    <main>
+        <section id="subscription">
+            <h2>Subscribe to Daily Quotes</h2>
+            <form id="subscription-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section id="recent-quotes">
+            <h2>Recent Quotes</h2>
+            <div id="quotes-container">
+                <!-- Quotes will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

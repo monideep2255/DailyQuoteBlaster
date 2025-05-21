@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#subscription {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#subscription h2 {
+    margin-top: 0;
+}
+
+#subscription-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#subscription-form label {
+    margin-bottom: 5px;
+}
+
+#subscription-form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#subscription-form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#subscription-form button:hover {
+    background-color: #555;
+}
+
+#recent-quotes {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#recent-quotes h2 {
+    margin-top: 0;
+}
+
+#quotes-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.quote:last-child {
+    border-bottom: none;
+}
