@@ -1,18 +1,17 @@
 import os
 import sys
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail, Email, To, Content
+import resend
 from logger import get_logger
 
 logger = get_logger(__name__)
 
-def get_sendgrid_key():
-    """Get SendGrid API key from environment variables."""
-    sendgrid_key = os.environ.get('SENDGRID_API_KEY')
-    if not sendgrid_key:
-        logger.error("SENDGRID_API_KEY environment variable must be set")
-        sys.exit('SENDGRID_API_KEY environment variable must be set')
-    return sendgrid_key
+def get_resend_key():
+    """Get Resend API key from environment variables."""
+    resend_key = os.environ.get('RESEND_API_KEY')
+    if not resend_key:
+        logger.error("RESEND_API_KEY environment variable must be set")
+        sys.exit('RESEND_API_KEY environment variable must be set')
+    return resend_key
 
 def create_email_template(quote_text, quote_author):
     """Create an HTML email template with the quote."""
@@ -72,24 +71,25 @@ def create_email_template(quote_text, quote_author):
 
 def send_quote_email(to_email, from_email, quote_text, quote_author, subject="Your Daily Inspiration"):
     """Send an email with the quote of the day."""
-    sendgrid_key = get_sendgrid_key()
+    resend_key = get_resend_key()
+    
+    # Initialize Resend with the API key
+    resend.api_key = resend_key
     
     html_content, plain_text = create_email_template(quote_text, quote_author)
     
-    message = Mail(
-        from_email=Email(from_email),
-        to_emails=To(to_email),
-        subject=subject
-    )
-    
-    # Add both HTML and plain text content
-    message.content = Content("text/html", html_content)
-    
     try:
-        sg = SendGridAPIClient(sendgrid_key)
-        response = sg.send(message)
-        logger.info(f"Email sent successfully! Status code: {response.status_code}")
+        # Send the email with Resend
+        response = resend.Emails.send({
+            "from": f"Daily Quote <{from_email}>",
+            "to": to_email,
+            "subject": subject,
+            "html": html_content,
+            "text": plain_text
+        })
+        
+        logger.info(f"Email sent successfully with Resend! ID: {response['id']}")
         return True
     except Exception as e:
-        logger.error(f"SendGrid error: {e}")
+        logger.error(f"Resend error: {e}")
         return False
