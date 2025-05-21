@@ -126,12 +126,13 @@ def main():
     # Get configuration from environment variables
     recipient_email = os.environ.get('RECIPIENT_EMAIL')
     sender_email = os.environ.get('SENDER_EMAIL', 'daily-quotes@resend.dev')
+    time_of_day = os.environ.get('TIME_OF_DAY', 'morning')  # Default to morning if not specified
     
     if not recipient_email:
         logger.error("RECIPIENT_EMAIL environment variable must be set")
         sys.exit("RECIPIENT_EMAIL environment variable must be set")
     
-    logger.info("Starting Daily Quote Sender")
+    logger.info(f"Starting Daily Quote Sender - {time_of_day.capitalize()} Edition")
     
     try:
         # Load all quotes
@@ -141,10 +142,27 @@ def main():
         preferred_category = determine_preferred_category()
         logger.info(f"Today's preferred quote category: {preferred_category}")
         
-        # Select a random quote with preference to the daily category
+        # For evening quotes, we'll use a slightly different category preference
+        if time_of_day.lower() == 'evening':
+            # In evening, prefer wisdom and growth quotes
+            evening_categories = ['wisdom', 'growth']
+            if any(cat in all_quotes for cat in evening_categories):
+                # Pick one of the evening categories randomly
+                available_evening = [cat for cat in evening_categories if cat in all_quotes]
+                preferred_category = random.choice(available_evening)
+                logger.info(f"Evening quote, switched to category: {preferred_category}")
+        
+        # Select a random quote with preference to the appropriate category
         quote = select_random_quote(all_quotes, preferred_category)
         
         logger.info(f"Selected {quote['category']} quote: '{quote['text']}' - {quote['author']}")
+        
+        # Create a custom subject based on time of day
+        subject = None
+        if time_of_day.lower() == 'morning':
+            subject = f"Your Morning Inspiration | Charge-Up Edition"
+        elif time_of_day.lower() == 'evening':
+            subject = f"Your Evening Reflection | Charge-Up Edition"
         
         # Send the email
         success = send_quote_email(
@@ -152,13 +170,14 @@ def main():
             from_email=sender_email,
             quote_text=quote['text'],
             quote_author=quote['author'],
-            category=quote.get('category', 'general')
+            category=quote.get('category', 'general'),
+            subject=subject
         )
         
         if success:
-            logger.info(f"Quote successfully sent to {recipient_email}")
+            logger.info(f"{time_of_day.capitalize()} quote successfully sent to {recipient_email}")
         else:
-            logger.error(f"Failed to send quote to {recipient_email}")
+            logger.error(f"Failed to send {time_of_day} quote to {recipient_email}")
         
         return success
     
