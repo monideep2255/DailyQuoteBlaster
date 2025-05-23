@@ -191,10 +191,11 @@ button:hover {
     position: absolute;
     top: -20px;
     left: 10px;
-    font-size: 150px;
-    color: rgba(67, 97, 238, 0.07);
+    font-size: 120px;
+    color: rgba(67, 97, 238, 0.05);
     z-index: 0;
     line-height: 1;
+    opacity: 0.6;
 }
 
 .quote-text {
@@ -205,6 +206,7 @@ button:hover {
     position: relative;
     z-index: 1;
     flex-grow: 1;
+    padding-top: 15px; /* Add top padding to prevent overlap */
 }
 
 .quote-author {
@@ -213,6 +215,7 @@ button:hover {
     color: var(--primary-color);
     position: relative;
     z-index: 1;
+    margin-top: 10px; /* Add margin to separate from quote text */
 }
 
 .quote-date {
@@ -224,8 +227,8 @@ button:hover {
 
 .quote-category {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 18px;
+    right: 18px;
     background-color: var(--primary-light);
     color: white;
     font-size: 0.75rem;
@@ -233,6 +236,7 @@ button:hover {
     border-radius: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    z-index: 2; /* Ensure the category badge is above the quote mark */
 }
 
 .motivational { background-color: #ff7b25; }
