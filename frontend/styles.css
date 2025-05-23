@@ -283,24 +283,28 @@ button:hover {
 /* Toast Messages */
 .toast {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
     padding: 15px 25px;
+    min-width: 300px;
+    max-width: 90%;
     background-color: var(--success-color);
     color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    transform: translateY(100px);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 16px;
+    text-align: center;
 }
 
 .toast.show {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
 
@@ -308,10 +312,15 @@ button:hover {
     background: none;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     padding: 0 0 0 15px;
     margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.toast-close:hover {
+    transform: scale(1.1);
 }
 
 footer {
