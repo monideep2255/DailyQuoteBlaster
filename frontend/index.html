@@ -3,29 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Quote Blaster</title>
+    <title>Daily Quote Sender — Charge-Up Edition</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Daily Quote Blaster</h1>
+        <div class="container">
+            <h1>Daily Quote Sender</h1>
+            <p>Start your day with inspiration, end it with reflection</p>
+        </div>
     </header>
-    <main>
-        <section id="subscription">
-            <h2>Subscribe to Daily Quotes</h2>
+
+    <main class="container">
+        <section id="subscription" class="card">
+            <h2 class="section-title">Subscribe to Daily Quotes</h2>
+            <p class="text-center">Receive motivational quotes directly to your email or phone. Choose one or both!</p>
+            
             <form id="subscription-form">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Subscribe</button>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone Number (for SMS)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (123) 456-7890">
+                </div>
+                
+                <div class="delivery-options">
+                    <h3>Delivery Options</h3>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="morning" name="morning" checked>
+                            <label for="morning">Morning (7 AM)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="evening" name="evening" checked>
+                            <label for="evening">Evening (9 PM)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="categories">Preferred Categories</label>
+                    <select id="categories" name="categories" multiple>
+                        <option value="all" selected>All Categories</option>
+                        <option value="motivational">Motivational</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="growth">Growth</option>
+                        <option value="decisions">Decisions</option>
+                        <option value="success">Success</option>
+                    </select>
+                </div>
+                
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Subscribe Now
+                </button>
             </form>
         </section>
+
         <section id="recent-quotes">
-            <h2>Recent Quotes</h2>
-            <div id="quotes-container">
+            <h2 class="section-title">Recent Inspirational Quotes</h2>
+            <div class="quotes-grid" id="quotes-container">
                 <!-- Quotes will be dynamically inserted here -->
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Daily Quote Sender — Charge-Up Edition</p>
+        </div>
+    </footer>
+
+    <!-- Toast Message -->
+    <div class="toast" id="toast">
+        <span id="toast-message">Successfully subscribed!</span>
+        <button class="toast-close" id="toast-close">&times;</button>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
