@@ -223,51 +223,145 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for filtering
     categoryFilter.addEventListener('change', filterAndDisplayQuotes);
     
+    // Additional sample quotes for refresh functionality
+    const additionalQuotes = [
+        {
+            text: "Don't watch the clock; do what it does. Keep going.",
+            author: "Sam Levenson",
+            date: "2025-05-22",
+            category: "motivational"
+        },
+        {
+            text: "The only limit to our realization of tomorrow is our doubts of today.",
+            author: "Franklin D. Roosevelt",
+            date: "2025-05-21",
+            category: "growth"
+        },
+        {
+            text: "The journey of a thousand miles begins with one step.",
+            author: "Lao Tzu",
+            date: "2025-05-20",
+            category: "wisdom"
+        },
+        {
+            text: "It's not about having time, it's about making time.",
+            author: "Unknown",
+            date: "2025-05-19", 
+            category: "decisions"
+        },
+        {
+            text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            author: "Winston Churchill",
+            date: "2025-05-18",
+            category: "success"
+        },
+        {
+            text: "Your time is limited, don't waste it living someone else's life.",
+            author: "Steve Jobs",
+            date: "2025-05-17",
+            category: "wisdom"
+        },
+        {
+            text: "You are never too old to set another goal or to dream a new dream.",
+            author: "C.S. Lewis",
+            date: "2025-05-16",
+            category: "growth"
+        },
+        {
+            text: "The best time to plant a tree was 20 years ago. The second best time is now.",
+            author: "Chinese Proverb",
+            date: "2025-05-15",
+            category: "motivational"
+        }
+    ];
+    
+    // Counter to track which quote set to display
+    let quoteSetIndex = 0;
+    
     // Refresh quotes when button is clicked
     refreshQuotesBtn.addEventListener('click', function() {
         const btn = this;
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Loading...';
         
-        // Immediately show sample quotes to improve perceived speed
-        const sampleQuotes = [
-            {
-                text: "The best way to predict the future is to create it.",
-                author: "Abraham Lincoln",
-                date: "2025-05-23",
-                category: "motivational"
-            },
-            {
-                text: "Whatever anybody says or does, assume positive intent.",
-                author: "Indra Nooyi",
-                date: "2025-05-22",
-                category: "wisdom"
-            },
-            {
-                text: "Choose your suffering before suffering chooses you!",
-                author: "Monideep",
-                date: "2025-05-21",
-                category: "growth"
-            },
-            {
-                text: "The right decision is always harder in the short term but better in the long term.",
-                author: "Dave Ramsey", 
-                date: "2025-05-20",
-                category: "decisions"
-            },
-            {
-                text: "If you will live like no one else, later you can live like no one else.",
-                author: "Dave Ramsey",
-                date: "2025-05-19",
-                category: "success"
-            }
-        ];
+        // Rotate between different sets of quotes
+        quoteSetIndex = (quoteSetIndex + 1) % 3;
         
-        // Show sample quotes immediately 
-        allQuotes = sampleQuotes;
+        // Show different quotes based on counter
+        if (quoteSetIndex === 1) {
+            allQuotes = additionalQuotes;
+        } else if (quoteSetIndex === 2) {
+            allQuotes = [
+                {
+                    text: "Believe you can and you're halfway there.",
+                    author: "Theodore Roosevelt",
+                    date: "2025-05-23",
+                    category: "motivational"
+                },
+                {
+                    text: "Life is 10% what happens to you and 90% how you react to it.",
+                    author: "Charles R. Swindoll",
+                    date: "2025-05-22",
+                    category: "wisdom"
+                },
+                {
+                    text: "What you do today can improve all your tomorrows.",
+                    author: "Ralph Marston",
+                    date: "2025-05-21",
+                    category: "growth"
+                },
+                {
+                    text: "It always seems impossible until it's done.",
+                    author: "Nelson Mandela", 
+                    date: "2025-05-20",
+                    category: "decisions"
+                },
+                {
+                    text: "Don't let yesterday take up too much of today.",
+                    author: "Will Rogers",
+                    date: "2025-05-19",
+                    category: "success"
+                }
+            ];
+        } else {
+            allQuotes = [
+                {
+                    text: "The best way to predict the future is to create it.",
+                    author: "Abraham Lincoln",
+                    date: "2025-05-23",
+                    category: "motivational"
+                },
+                {
+                    text: "Whatever anybody says or does, assume positive intent.",
+                    author: "Indra Nooyi",
+                    date: "2025-05-22",
+                    category: "wisdom"
+                },
+                {
+                    text: "Choose your suffering before suffering chooses you!",
+                    author: "Monideep",
+                    date: "2025-05-21",
+                    category: "growth"
+                },
+                {
+                    text: "The right decision is always harder in the short term but better in the long term.",
+                    author: "Dave Ramsey", 
+                    date: "2025-05-20",
+                    category: "decisions"
+                },
+                {
+                    text: "If you will live like no one else, later you can live like no one else.",
+                    author: "Dave Ramsey",
+                    date: "2025-05-19",
+                    category: "success"
+                }
+            ];
+        }
+        
+        // Show the new quotes
         filterAndDisplayQuotes();
         
-        // Reset button right away
+        // Reset button after a short delay
         setTimeout(() => {
             btn.disabled = false;
             btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Quotes';
