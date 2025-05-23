@@ -225,16 +225,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Refresh quotes when button is clicked
     refreshQuotesBtn.addEventListener('click', function() {
-        this.disabled = true;
-        this.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Loading...';
+        const btn = this;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Loading...';
         
-        fetchRecentQuotes()
-            .finally(() => {
-                setTimeout(() => {
-                    this.disabled = false;
-                    this.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Quotes';
-                }, 800);
-            });
+        // Fetch quotes and handle button state
+        fetchRecentQuotes();
+        
+        // Reset button after a delay
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Quotes';
+        }, 800);
     });
     
     // Format date as "Month Day, Year"
