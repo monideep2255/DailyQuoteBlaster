@@ -68,8 +68,57 @@
 
         <section id="recent-quotes">
             <h2 class="section-title">Recent Inspirational Quotes</h2>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="category-filter">Filter by Category:</label>
+                    <select id="category-filter">
+                        <option value="all" selected>All Categories</option>
+                        <option value="motivational">Motivational</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="growth">Growth</option>
+                        <option value="decisions">Decisions</option>
+                        <option value="success">Success</option>
+                        <option value="general">General</option>
+                    </select>
+                </div>
+                <button id="refresh-quotes" class="secondary-button">
+                    <i class="fas fa-sync-alt"></i> Refresh Quotes
+                </button>
+            </div>
             <div class="quotes-grid" id="quotes-container">
                 <!-- Quotes will be dynamically inserted here -->
+            </div>
+            <div class="empty-state" id="empty-quotes" style="display: none;">
+                <div class="empty-icon"><i class="fas fa-quote-right"></i></div>
+                <h3>No Quotes Found</h3>
+                <p>Try selecting a different category or check back later for new quotes.</p>
+            </div>
+        </section>
+        
+        <section id="about" class="card">
+            <h2 class="section-title">About Daily Quote Sender</h2>
+            <div class="about-content">
+                <p>Daily Quote Sender delivers motivational and inspirational quotes to help you start your day with intention and end it with reflection.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <i class="fas fa-clock feature-icon"></i>
+                        <h3>Twice Daily Delivery</h3>
+                        <p>Receive morning motivation at 7 AM and evening reflection at 9 PM.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-tag feature-icon"></i>
+                        <h3>Categorized Quotes</h3>
+                        <p>Different categories for different days of the week to keep things fresh.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt feature-icon"></i>
+                        <h3>Email & SMS</h3>
+                        <p>Choose to receive quotes via email, SMS, or both for maximum convenience.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

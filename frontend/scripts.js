@@ -104,18 +104,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
+    // Category filter elements
+    const categoryFilter = document.getElementById('category-filter');
+    const refreshQuotesBtn = document.getElementById('refresh-quotes');
+    const emptyQuotesEl = document.getElementById('empty-quotes');
+    
+    // Store all quotes for filtering
+    let allQuotes = [];
+    
     // Fetch recent quotes
     function fetchRecentQuotes() {
         fetch('/api/quotes/recent')
         .then(response => response.json())
         .then(data => {
-            displayQuotes(data);
+            allQuotes = data; // Store all quotes
+            filterAndDisplayQuotes();
         })
         .catch(error => {
             console.error('Error fetching quotes:', error);
             
             // If API fails, show sample quotes
-            const sampleQuotes = [
+            allQuotes = [
                 {
                     text: "The best way to predict the future is to create it.",
                     author: "Abraham Lincoln",
@@ -147,8 +156,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     category: "success"
                 }
             ];
-            displayQuotes(sampleQuotes);
+            filterAndDisplayQuotes();
         });
+    }
+    
+    // Filter quotes by category and display
+    function filterAndDisplayQuotes() {
+        const selectedCategory = categoryFilter.value;
+        
+        // Filter quotes by category (if not 'all')
+        const filteredQuotes = selectedCategory === 'all' 
+            ? allQuotes 
+            : allQuotes.filter(quote => quote.category === selectedCategory);
+            
+        // Display quotes or empty state
+        if (filteredQuotes.length > 0) {
+            displayQuotes(filteredQuotes);
+            quotesContainer.style.display = 'grid';
+            emptyQuotesEl.style.display = 'none';
+        } else {
+            quotesContainer.style.display = 'none';
+            emptyQuotesEl.style.display = 'block';
+        }
     }
 
     // Display quotes in a modern card layout
@@ -190,6 +219,23 @@ document.addEventListener('DOMContentLoaded', function() {
             quotesContainer.appendChild(quoteCard);
         });
     }
+    
+    // Event listeners for filtering
+    categoryFilter.addEventListener('change', filterAndDisplayQuotes);
+    
+    // Refresh quotes when button is clicked
+    refreshQuotesBtn.addEventListener('click', function() {
+        this.disabled = true;
+        this.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Loading...';
+        
+        fetchRecentQuotes()
+            .finally(() => {
+                setTimeout(() => {
+                    this.disabled = false;
+                    this.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Quotes';
+                }, 800);
+            });
+    });
     
     // Format date as "Month Day, Year"
     function formatDate(dateString) {
