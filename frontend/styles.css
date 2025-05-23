@@ -206,7 +206,8 @@ button:hover {
     position: relative;
     z-index: 1;
     flex-grow: 1;
-    padding-top: 15px; /* Add top padding to prevent overlap */
+    padding-top: 30px; /* Increased top padding to move quote down */
+    margin-top: 10px; /* Added margin to create more space */
 }
 
 .quote-author {
