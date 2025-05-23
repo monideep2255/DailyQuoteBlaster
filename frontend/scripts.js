@@ -229,14 +229,49 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Loading...';
         
-        // Fetch quotes and handle button state
-        fetchRecentQuotes();
+        // Immediately show sample quotes to improve perceived speed
+        const sampleQuotes = [
+            {
+                text: "The best way to predict the future is to create it.",
+                author: "Abraham Lincoln",
+                date: "2025-05-23",
+                category: "motivational"
+            },
+            {
+                text: "Whatever anybody says or does, assume positive intent.",
+                author: "Indra Nooyi",
+                date: "2025-05-22",
+                category: "wisdom"
+            },
+            {
+                text: "Choose your suffering before suffering chooses you!",
+                author: "Monideep",
+                date: "2025-05-21",
+                category: "growth"
+            },
+            {
+                text: "The right decision is always harder in the short term but better in the long term.",
+                author: "Dave Ramsey", 
+                date: "2025-05-20",
+                category: "decisions"
+            },
+            {
+                text: "If you will live like no one else, later you can live like no one else.",
+                author: "Dave Ramsey",
+                date: "2025-05-19",
+                category: "success"
+            }
+        ];
         
-        // Reset button after a delay
+        // Show sample quotes immediately 
+        allQuotes = sampleQuotes;
+        filterAndDisplayQuotes();
+        
+        // Reset button right away
         setTimeout(() => {
             btn.disabled = false;
             btn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Quotes';
-        }, 800);
+        }, 300);
     });
     
     // Format date as "Month Day, Year"
