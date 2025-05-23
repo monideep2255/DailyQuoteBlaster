@@ -87,13 +87,17 @@ main {
 }
 
 #subscription-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
 .form-group label {
@@ -110,6 +114,7 @@ main {
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
 .form-group input:focus {
@@ -118,12 +123,14 @@ main {
 }
 
 .delivery-options {
-    margin: 20px 0;
+    margin: 5px 0 15px 0;
+    width: 100%;
 }
 
 .delivery-options h3 {
     margin-bottom: 15px;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .checkbox-group {
@@ -138,6 +145,32 @@ main {
 
 .checkbox-item input[type="checkbox"] {
     margin-right: 8px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    cursor: pointer;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 120px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.form-group select option {
+    padding: 8px;
+}
+
+.form-group select:focus {
+    border-color: var(--primary-light);
+    outline: none;
 }
 
 button {
@@ -151,6 +184,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%;
+    margin-top: 10px;
 }
 
 button:hover {
