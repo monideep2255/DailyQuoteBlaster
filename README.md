@@ -157,9 +157,10 @@ SENDER_EMAIL=daily-quotes@yourdomain.com
 2. Create the `.env` file with required environment variables
 3. Install dependencies:
    ```
-   pip install -r requirements.txt
+   pip install -r backend/requirements.txt
    npm install
    ```
+   Python dependencies are listed in `backend/requirements.txt`.
 4. Set up the database:
    ```
    psql -U postgres -c "CREATE DATABASE daily_quotes;"
