@@ -90,9 +90,10 @@ def select_random_quote(quotes_dict, preferred_category=None):
         selected_category = random.choice(available_categories)
     
     # Select a random quote from the chosen category
-    selected_quote = random.choice(quotes_dict[selected_category])
+    # Copy the quote so we don't mutate the original data structure
+    selected_quote = random.choice(quotes_dict[selected_category]).copy()
     selected_quote["category"] = selected_category
-    
+
     return selected_quote
 
 def determine_preferred_category():
