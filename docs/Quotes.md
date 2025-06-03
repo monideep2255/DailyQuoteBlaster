@@ -14,7 +14,7 @@
 * Discipline gives you choices in life  
 * **Every NO gets you closer to a YES**  
 * **Everyone wants to feel (1) safe and secure and (2) in control**  
-* Negotiation… is nothing more than communication with results. \~ Chriss Voss  
+* Negotiation… is nothing more than communication with results. \~ Chris Voss  
 * Use What and How, not Why, while negotiating or discussing a topic  
 * **How to make a decision:**  
   * Choose  
