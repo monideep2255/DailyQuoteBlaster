@@ -64,8 +64,12 @@ def add_subscriber(email=None, phone=None, morning=True, evening=True, categorie
 
 if __name__ == "__main__":
     # This script is meant to be called from Node.js
-    if len(sys.argv) < 3:
-        print(json.dumps({"success": False, "message": "Not enough arguments provided"}))
+    if len(sys.argv) < 2:
+        usage_msg = (
+            "Usage: python add_subscriber.py <email> <phone> [morning] "
+            "[evening] [categories] - either email or phone is required"
+        )
+        print(json.dumps({"success": False, "message": usage_msg}))
         sys.exit(1)
         
     # Get arguments

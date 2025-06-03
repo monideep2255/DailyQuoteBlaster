@@ -232,8 +232,10 @@ python send_email.py test@example.com
 # Send a test SMS
 python send_sms.py +1234567890
 
-# Add a new subscriber
-python add_subscriber.py --email=user@example.com --phone=+1234567890
+# Add a new subscriber (email or phone is sufficient)
+python add_subscriber.py user@example.com
+# Or using a phone number only
+python add_subscriber.py "" +1234567890
 
 # View recent quotes
 python get_recent_quotes.py
