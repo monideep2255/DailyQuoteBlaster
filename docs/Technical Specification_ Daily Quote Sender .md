@@ -4,6 +4,21 @@
 
 ---
 
+## Current status (July 2026): architecture as built
+
+This v1.0 spec is the original May 2025 design, kept for history. The app was built and then migrated off Replit to a free serverless stack. The as-built architecture differs from the plan below:
+
+- Frontend: static site in `frontend/`, hosted on Netlify.
+- APIs: two Netlify Functions (`subscribe`, `recent-quotes`) using `@neondatabase/serverless` with parameterized queries. They replace the planned Flask and Express backend.
+- Database: Neon serverless Postgres, tables `subscribers` and `quotes_sent`, auto-created on first use. (The "no database" security note below no longer applies; email addresses are stored.)
+- Email: Resend, not SendGrid.
+- Scheduling: a GitHub Actions cron workflow (`.github/workflows/daily-quotes.yml`) runs `run_scheduled.py` at 7 AM and 9 PM Eastern, with an internal timezone guard for daylight saving. It replaces Replit and Windsurf cron.
+- SMS: Twilio code is present but disabled (email-only, no cost).
+
+For setup steps and tests, see [../README.md](../README.md) and [test-cases.md](test-cases.md). Live site: https://dailyquoteblaster.netlify.app
+
+---
+
 ## **1\. 📅 Application Overview**
 
 The Daily Quote Sender is a backend-driven, schedule-based tool that randomly selects a quote from a local list and sends it to a recipient via email (and optionally SMS) every morning. The system is designed to be minimal, reliable, and shareable.

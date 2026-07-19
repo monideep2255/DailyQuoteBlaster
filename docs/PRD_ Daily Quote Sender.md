@@ -4,6 +4,20 @@
 
 ---
 
+## Current status (July 2026)
+
+This is the original May 2025 planning document, kept for history. The app shipped and was later migrated off Replit to a fully free serverless stack. For the current architecture and how to run it, see [../README.md](../README.md) and [test-cases.md](test-cases.md).
+
+What changed since this document was written:
+
+- Email is Resend, not SendGrid.
+- The daily send runs on a GitHub Actions cron job, not Replit or Windsurf cron.
+- The app now has database persistence (Neon serverless Postgres, tables `subscribers` and `quotes_sent`). The "no database persistence" non-goal below no longer holds.
+- The web APIs are Netlify Functions, not an always-on Express or Flask backend.
+- Live site: https://dailyquoteblaster.netlify.app
+
+---
+
 ## **1\. 🧠 Background / Context**
 
 Many people want a small ritual to start their day with intention, energy, or calm. While journaling and meditation apps exist, they often require user interaction. A lightweight solution is to receive a **daily motivational or thoughtful quote** in the morning — no app required.
