@@ -1,4 +1,13 @@
-
 .env
 logs/
 *.log
+
+# Node / Netlify
+node_modules/
+.netlify/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

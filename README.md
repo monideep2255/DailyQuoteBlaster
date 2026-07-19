@@ -196,27 +196,37 @@ SENDER_EMAIL=daily-quotes@yourdomain.com
     └── README.md                # Project documentation
 ```
 
-## Deployment Instructions
+## Deployment (free tier)
 
-### Backend Deployment on Replit
+This app was migrated off Replit to a fully free stack:
 
-1. Create a new Replit project
-2. Upload all files or connect to your GitHub repository
-3. Configure the Secrets (environment variables) in the Replit project
-4. Use the "Deployments" feature to deploy your project
+- Frontend: static files in `frontend/`, hosted on Netlify.
+- Subscribe and recent-quotes APIs: Netlify Functions in `netlify/functions/`, talking to Neon over a server-side `DATABASE_URL`.
+- Database: Neon serverless Postgres. Tables auto-create on first use.
+- Daily send: a GitHub Actions cron workflow (`.github/workflows/daily-quotes.yml`) runs `run_scheduled.py` at 7 AM and 9 PM Eastern. No always-on server.
 
-### Frontend Deployment on Netlify
+The legacy `server.js` (Express) and `backend/app.py` (Flask) are kept for reference but are no longer used; the Netlify Functions replace them.
 
-1. Create a free Netlify account at [netlify.com](https://www.netlify.com/)
-2. From the Netlify dashboard, click "New site from Git"
-3. Connect to your GitHub repository
-4. Configure the build settings:
-   - Build command: `npm run build` (if using a build process)
-   - Publish directory: `frontend` (or the directory containing your static files)
-5. Configure environment variables in the Netlify UI:
-   - Go to Site settings > Build & deploy > Environment
-   - Add the same environment variables you used locally
-6. Deploy your site and enjoy your public Daily Quote Sender!
+### 1. Database on Neon
+
+1. Create a free project at [neon.tech](https://neon.tech/).
+2. Copy the connection string (looks like `postgresql://...neon.tech/...?sslmode=require`). This is `DATABASE_URL`.
+
+### 2. Frontend and functions on Netlify
+
+1. In Netlify, "Add new site" then "Import from Git", and pick this repository.
+2. Build settings come from `netlify.toml` (publish `frontend`, functions in `netlify/functions`). No build command is needed.
+3. In Site settings > Environment variables, add `DATABASE_URL` (the Neon string).
+4. Deploy. The subscribe form now writes real rows to Neon.
+
+### 3. Daily send on GitHub Actions
+
+1. In the repository, add Actions secrets (Settings > Secrets and variables > Actions):
+   - `DATABASE_URL` (the Neon string)
+   - `RESEND_API_KEY` (from [resend.com](https://resend.com/))
+   - `SENDER_EMAIL` (a verified Resend sender, or `onboarding@resend.dev` for testing)
+   - Twilio secrets are optional; leave them unset for email-only.
+2. The workflow runs on its cron automatically. To test now, run it manually from the Actions tab with the `slot` set to `morning`.
 
 ## Usage Examples
 

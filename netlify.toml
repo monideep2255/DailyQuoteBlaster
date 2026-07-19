@@ -1,0 +1,14 @@
+# Netlify configuration for DailyQuoteBlaster
+# Frontend is static (published from frontend/). The subscribe and recent-quotes
+# APIs are Netlify Functions that talk to Neon Postgres. The daily send job runs
+# in GitHub Actions, not here.
+
+[build]
+  publish = "frontend"
+  functions = "netlify/functions"
+
+# No build step: the frontend is plain static files.
+  command = "echo 'no build step; static frontend'"
+
+[functions]
+  node_bundler = "esbuild"
